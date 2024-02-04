@@ -9,8 +9,8 @@ body {
 
 svg.rose {
     position: absolute;
-    width: 60%;
-    padding-top: 1em;
+    width: 80%;
+    padding-top: 50em;
     margin-top: -100px;
     margin-bottom: -100px;
     z-index: -1;
@@ -19,8 +19,8 @@ svg.rose {
 
 h1 {
     color: #001279;
-    font-size: 40px;
-    margin-top: 60px;
+    font-size: 50px;
+    margin-top: 500px;
 }
 
 @keyframes rose-animation {
