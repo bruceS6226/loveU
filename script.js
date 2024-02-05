@@ -272,7 +272,7 @@ const start = () => {
   });
   anime({
     easing: 'easeInOutQuad',
-    duration: 25000,
+    duration: 28000,
     complete: () => {
       MOUTH_TL.pause();
     }
