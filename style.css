@@ -7,16 +7,14 @@
 }
 
 body {
-
-
   margin: 0;
   flex-direction: column;
-
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+  background-color: #B695C0;
 }
 
 .heart {
@@ -108,23 +106,27 @@ span {
 svg.rose {
   position: absolute;
   width: 50%;
-  margin-top: -300px;
   margin-bottom: -100px;
   z-index: -1;
   opacity: 0;
 }
 
 .primer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: auto;
 }
 
 h1 {
-  color: #001279;
+  color: #ffffff;
   font-size: 50px;
   opacity: 0;
   margin: 0;
   margin-top: 100px;
-  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @keyframes rose-animation {

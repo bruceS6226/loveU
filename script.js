@@ -4,6 +4,9 @@ const { timeline, to, set } = gsap;
 const $RAIN = document.querySelector('.rain');
 const $HEARTS = document.querySelector('.hearts');
 const $FELIZ = document.querySelector('.feliz');
+const $TQUIERO = document.querySelector('.tQuiero');
+const $FELICIDAD = document.querySelector('.felicidad');
+const $GRACIAS = document.querySelector('.gracias');
 const $ROSA = document.querySelector('.rose');
 const $backgroundMusic = document.querySelector('.backgroundMusic')
 const $BEAR = document.querySelector('.care-bear');
@@ -228,36 +231,56 @@ const start = () => {
     duration: 1500,
     complete: () => {
       MOUTH_TL.play();
+      anime({
+        targets: $FELIZ,
+        easing: 'easeInOutQuad',
+        duration: 1000,
+        opacity: 1
+      });
     }
   });
   anime({
-    targets: $ROSA,
     easing: 'linear',
     duration: 8000,
     complete: () => {
       anime({
         targets: $ROSA,
         easing: 'linear',
-        duration: 12000,
+        duration: 10000,
         opacity: 1
       });
     }
   });
   anime({
-    targets: $BEAR,
     easing: 'easeInOutQuad',
-    duration: 5000,
+    duration: 4000,
     complete: () => {
       anime({
-        targets: $FELIZ,
+        targets: $TQUIERO,
         easing: 'easeInOutQuad',
-        duration: 6000,
-        opacity: 1
+        duration: 2000,
+        opacity: 1,
+        complete: () => {
+          anime({
+            targets: $FELICIDAD,
+            easing: 'easeInOutQuad',
+            duration: 2000,
+            opacity: 1,
+            complete: () => {
+              anime({
+                targets: $GRACIAS,
+                easing: 'easeInOutQuad',
+                duration: 2000,
+                opacity: 1
+              });
+            }
+          });
+        }
       });
       anime({
         targets: $BEAR,
         easing: 'easeInOutQuad',
-        duration: 10000,
+        duration: 12000,
         marginTop: '500px',
         complete: () => {
           try {
